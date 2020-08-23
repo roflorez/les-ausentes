@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=0.1, minimum-scale=0.1">
+    <title>Naju & Les Ausentes</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="imagenes/icono.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div id="menu"> 
+            <h1>NAJU & LES AUSENTES</h1>  
+            <nav>
+                <ul>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Próximas fechas</a></li>
+                    <li><a href="#">Novedades</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Discografía</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="acerca-de">
+            <h2 class="titulo">Acerca de</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate aspernatur perferendis dignissimos consequatur maxime dolor nostrum nobis tempore nisi suscipit culpa asperiores, nihil ad, numquam voluptas soluta. Nostrum, delectus.</p>
+        </section>
+        <section id="proximas-fechas">
+            <h2 class="titulo">Próximas fechas</h2>
+        </section>
+        <section style="display: flex; justify-content: center;">
+            <div id="novedades">
+            <h2 class="titulo">Novedades</h2>
+            <!-- SnapWidget -->
+            <script src="https://snapwidget.com/js/snapwidget.js"></script>
+            <iframe src="https://snapwidget.com/embed/865341" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:60%; padding-bottom: 20px;"></iframe>
+            </div>
+        </section>
+        <section id="video">
+            <div id="contenedorvideo">
+            <h2 class="titulo">Videos</h2>
+            <video id="mi_vid">
+                <source src="media/adelanto.mp4">
+            </video>
+           
+            <button id="btn_reproducir">Play</button>
+            <button id="btn_pausar">Pausar</button>
+
+            <script>
+
+                let miVideo = document.getElementById('mi_vid')
+
+                document.getElementById('btn_reproducir').onclick = reproduccion;
+                document.getElementById('btn_pausar').onclick = parar;
+
+                function reproduccion(){
+                    miVideo.play()
+                }
+
+                function parar(){
+                    miVideo.pause()
+                }
+
+            </script>
+        </div>
+        </section>
+        <section style="display: flex; justify-content: center;">
+            <div id="discografia">
+            <h2 class="titulo">Discografía</h2>
+            <iframe style="border: 0; width: 200px; height: 200px; margin: 10px;" src="https://bandcamp.com/EmbeddedPlayer/album=3897163504/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://lesausentes.bandcamp.com/album/home-demos-3">HOME DEMOS #3 by Naju &amp; Les Ausentes</a></iframe>
+            <iframe style="border: 0; width: 200px; height: 200px; margin: 10px;" src="https://bandcamp.com/EmbeddedPlayer/album=1138202980/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://lesausentes.bandcamp.com/album/home-demos-2">HOME DEMOS #2 by Naju &amp; Les Ausentes</a></iframe>
+            <iframe style="border: 0; width: 200px; height: 200px; margin: 10px;" src="https://bandcamp.com/EmbeddedPlayer/album=1031648657/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://lesausentes.bandcamp.com/album/home-demos-1">HOME DEMOS #1 by Naju &amp; Les Ausentes</a></iframe>
+            </div>
+        </section>
+    </main>
+    <footer> 
+        © 2020 Naju & Les Ausentes
+    </footer>
+</body>
+</html>
