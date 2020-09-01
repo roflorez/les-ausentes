@@ -2,30 +2,39 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=0.1, minimum-scale=0.1">
-    <title>Naju & Les Ausentes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naju & Les Ausentes | Web</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="shortcut icon" href="imagenes/icono.png" type="image/x-icon">
 </head>
 <body>
     <header>
-        <div id="menu"> 
-            <h1>NAJU & LES AUSENTES</h1>  
-            <nav>
-                <ul>
-                    <li><a href="#">Acerca de</a></li>
-                    <li><a href="#">Próximas fechas</a></li>
-                    <li><a href="#">Novedades</a></li>
-                    <li><a href="#">Videos</a></li>
-                    <li><a href="#">Discografía</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+        <div class="desplegable">
+        <button class="btndesp"><img src="imagenes/logo.png" alt="" class="btndesp"></button>
+        <div class="contenido-desplegable">
+             <ul>
+                <li><a href="#acerca-de">Acerca de</a></li>
+                <li><a href="#proximas-fechas">Próximas fechas</a></li>
+                <li><a href="#novedades">Novedades</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#discografia">Discografía</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+             </ul>
+            </div>
+          </div>  
+         </nav>
     </header>
     <main>
         <section id="acerca-de">
             <h2 class="titulo">Acerca de</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate aspernatur perferendis dignissimos consequatur maxime dolor nostrum nobis tempore nisi suscipit culpa asperiores, nihil ad, numquam voluptas soluta. Nostrum, delectus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies ac dui eget maximus. Duis turpis nisl, dignissim id cursus sed, malesuada eu arcu. Mauris lobortis varius est, nec consectetur nibh condimentum ut. Aliquam finibus eros sed bibendum eleifend. Nam molestie neque lectus, ac laoreet risus tempus vitae. Mauris aliquam feugiat ipsum eu faucibus. Aliquam tortor quam, luctus ac sapien tincidunt, suscipit porttitor quam. Donec condimentum augue est, at pellentesque urna facilisis non.</p>
+            <br>
+            <p>In dignissim risus sed lobortis fringilla. Nunc eu scelerisque erat, a pretium enim. Aenean consequat mi et semper suscipit. Etiam ut metus mauris. Donec dapibus neque vel porttitor dictum. Curabitur scelerisque consectetur faucibus. Curabitur sodales nisi mi, et scelerisque eros semper vel. Phasellus at nunc ornare, consectetur ex tempus, faucibus mi. Praesent efficitur semper sem, a lobortis nulla ullamcorper at. Suspendisse eu condimentum lectus. Vestibulum vestibulum nulla vitae nulla bibendum malesuada. Cras orci metus, suscipit et placerat ut, laoreet id tellus. Fusce vitae erat in nisl malesuada vehicula nec a enim. Vestibulum elementum gravida accumsan. Donec eget dui sed erat convallis vehicula.</p>
+            <br>   
+            <p>Integer malesuada rhoncus quam, vitae efficitur elit hendrerit vitae. Vestibulum ultrices orci at ipsum ornare cursus. Aenean ornare varius purus, in scelerisque libero consequat pellentesque. Duis in tempus augue, finibus tincidunt lorem. Nulla non nisi eu lorem tincidunt dignissim blandit vel arcu. Cras scelerisque ut lacus sed euismod. Proin et dolor et est gravida porta vitae eget nibh.</p>
+            <br>   
+            <p>Nam erat quam, ultrices vel ligula mollis, dapibus fermentum nulla. Donec quis rutrum metus. Vivamus sit amet lectus id turpis vestibulum laoreet nec a magna. Nullam in libero pellentesque, mattis ligula vel, fermentum est. Nulla aliquet malesuada urna eget condimentum. Vivamus venenatis ex sit amet mollis suscipit. Sed rhoncus consectetur sollicitudin. Sed dignissim efficitur aliquam. Mauris euismod augue id dolor tempor, et hendrerit ipsum volutpat. Nulla et tincidunt magna. Proin at varius tellus, et blandit orci.</p>
         </section>
         <section id="proximas-fechas">
             <h2 class="titulo">Próximas fechas</h2>
@@ -35,44 +44,38 @@
             <h2 class="titulo">Novedades</h2>
             <!-- SnapWidget -->
             <script src="https://snapwidget.com/js/snapwidget.js"></script>
-            <iframe src="https://snapwidget.com/embed/865341" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:60%; padding-bottom: 20px;"></iframe>
+            <iframe src="https://snapwidget.com/embed/865341" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:60%; padding-bottom:50px;"></iframe>
             </div>
         </section>
-        <section id="video">
+        <section id="videos">
             <div id="contenedorvideo">
             <h2 class="titulo">Videos</h2>
             <video id="mi_vid">
                 <source src="media/adelanto.mp4">
             </video>
-           
-            <button id="btn_reproducir">Play</button>
-            <button id="btn_pausar">Pausar</button>
 
-            <script>
+            <button id="btn_reproducir" class="boton"><img src="imagenes/play.png" alt="" class="boton"></button>
+            <button id="btn_pausar" class="boton"><img src="imagenes/pausa.png" alt="" class="boton"></button>
 
-                let miVideo = document.getElementById('mi_vid')
-
-                document.getElementById('btn_reproducir').onclick = reproduccion;
-                document.getElementById('btn_pausar').onclick = parar;
-
-                function reproduccion(){
-                    miVideo.play()
-                }
-
-                function parar(){
-                    miVideo.pause()
-                }
-
-            </script>
+            <script src="js/script.js"></script>
         </div>
         </section>
-        <section style="display: flex; justify-content: center;">
-            <div id="discografia">
+        <section id="discografia" style="display: flex; justify-content: center;">
+            <div>
             <h2 class="titulo">Discografía</h2>
             <iframe style="border: 0; width: 200px; height: 200px; margin: 10px;" src="https://bandcamp.com/EmbeddedPlayer/album=3897163504/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://lesausentes.bandcamp.com/album/home-demos-3">HOME DEMOS #3 by Naju &amp; Les Ausentes</a></iframe>
             <iframe style="border: 0; width: 200px; height: 200px; margin: 10px;" src="https://bandcamp.com/EmbeddedPlayer/album=1138202980/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://lesausentes.bandcamp.com/album/home-demos-2">HOME DEMOS #2 by Naju &amp; Les Ausentes</a></iframe>
             <iframe style="border: 0; width: 200px; height: 200px; margin: 10px;" src="https://bandcamp.com/EmbeddedPlayer/album=1031648657/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://lesausentes.bandcamp.com/album/home-demos-1">HOME DEMOS #1 by Naju &amp; Les Ausentes</a></iframe>
             </div>
+        </section>
+        <section id="contacto">
+            <form>
+                <h2 class="titulo">Contacto</h2>
+                <input type="text" name="Nombre" placeholder="Nombre">
+                <input type="text" name="Correo" placeholder="Correo electrónico">
+                <textarea name="Mensaje" placeholder="Mensaje"></textarea>
+                <input type="button" value="Enviar" id="btnform">
+            </form>
         </section>
     </main>
     <footer> 
